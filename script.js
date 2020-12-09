@@ -84,6 +84,7 @@ DomElement.prototype.move  = function (event) {
 };
 
 DomElement.prototype.listener = function () {
+    document.addEventListener("DOMContentLoaded", this.move.bind());
     document.body.addEventListener('keydown', this.move.bind(this));
 
 };
