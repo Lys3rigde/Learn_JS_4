@@ -1,11 +1,12 @@
 'use strict';
 
-const DomElement = function (selector, height, width, bg, fontSize) {
-    this.selector = prompt('Введите . или #') + selector;
+const DomElement = function (selector, height, width, bg, fontSize, position) {
+    this.selector = selector;
     this.height = height;
     this.width = width;
     this.bg = bg;
     this.fontSize = fontSize;
+    this.position = position;
 };
 
 DomElement.prototype.createElement = function(){
@@ -27,12 +28,13 @@ DomElement.prototype.createElement = function(){
     background-color: ${this.bg};
     width: ${this.width};
     font-size: ${this.fontSize};
+    position: ${this.position};
     `;
     document.body.append(newElem);
 
 };
 
-const FirstElem = new DomElement('selector', '100px', '100px', 'blue', '1rem');
+const FirstElem = new DomElement('.selector', '100px', '100px', 'blue', '1rem', 'absolute');
 
 FirstElem.createElement();
 
