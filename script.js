@@ -1,7 +1,7 @@
 'use strict';
 
 const DomElement = function (selector, height, width, bg, fontSize, position) {
-    this.selector = selector;
+    this.selector = prompt('Введите . или #') +  selector;
     this.height = height;
     this.width = width;
     this.bg = bg;
@@ -34,7 +34,7 @@ DomElement.prototype.createElement = function(){
 
 };
 
-const FirstElem = new DomElement('.selector', '100px', '100px', 'blue', '1rem', 'absolute');
+const FirstElem = new DomElement('selector', '100px', '100px', 'blue', '1rem', 'absolute');
 
 FirstElem.createElement();
 
